@@ -21,9 +21,9 @@ function App() {
       {/* Importing and using the Secondcomponent(Below we render/display/show our second component) */}
         <Secondcomponent />
       {/* Importing and using the Contactuscomponent(Below we render/display/show our contact us component) */}
-         <Contactuscomponent />
+        <Contactuscomponent />
       {/* Importing and using the Aboutcomponent(Below we render/display/show our about us component) */}
-         <Aboutcomponent />
+        <Aboutcomponent />
     </div>
   );
 }
