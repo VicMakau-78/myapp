@@ -7,4 +7,5 @@ const Aboutcomponent = () => {
     )
 }
 
+
 export default Aboutcomponent;
