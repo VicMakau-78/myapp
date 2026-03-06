@@ -7,13 +7,29 @@ import Thirdcomponent from './components/Thirdcomponent';
 import Fourthcomponent from './components/Fourthcomponent';
 import Fifthcomponent from './components/Fifthcomponent';
 import Sixthcomponent from './components/Sixthcomponent';
+import Notfound from './components/Notfound';
+
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 // Importing the Contactuscomponent and Aboutcomponent from the Assignment folder
 import Contactuscomponent from './Assignment/Contactuscomponent';
 import Aboutcomponent from './Assignment/Aboutcomponent';
 
 function App() {
   return (
+    <Router>
     <div className="App">
+
+    <nav>
+      <Link to="/first" className='navlinks'>Firstcomponent</Link>
+      <Link to="/second" className='navlinks'>Secondcomponent</Link>
+      <Link to="/third" className='navlinks'>Thirdcomponent</Link>
+      <Link to="/fourth" className='navlinks'>Fourthcomponent</Link>
+      <Link to="/fifth" className='navlinks'>Fifthcomponent</Link>
+      <Link to="/sixth" className='navlinks'>Sixthcomponent</Link>
+      <Link to="/contactus" className='navlinks'>Contactuscomponent</Link>
+      <Link to="/about" className='navlinks'>Aboutcomponent</Link>
+    </nav>
+
       <header className="App-header">
         <h1>Welcome to learning reactjs</h1>
         <h2>React is fun</h2>
@@ -21,17 +37,20 @@ function App() {
         
       </header>
       {/*Below we render/display/show our components */}
-        <Firstcomponent />
-        <Secondcomponent />
-        <Thirdcomponent />
-        <Fourthcomponent/>
-        <Fifthcomponent/>
-        <Sixthcomponent/>
-      {/* Importing and using the Contactuscomponent(Below we render/display/show our contact us component) */}
-        <Contactuscomponent />
-      {/* Importing and using the Aboutcomponent(Below we render/display/show our about us component) */}
-        <Aboutcomponent />
+      <Routes>
+        <Route path="/first" element={<Firstcomponent/>}/>
+        <Route path="/second" element={<Secondcomponent/>}/>
+        <Route path="/third" element={<Thirdcomponent/>}/>
+        <Route path="/fourth" element={<Fourthcomponent/>}/>
+        <Route path="/fifth" element={<Fifthcomponent/>}/>
+        <Route path="/sixth" element={<Sixthcomponent/>}/>
+        <Route path="/contactus" element={<Contactuscomponent/>}/>
+        <Route path="/about" element={<Aboutcomponent/>}/>
+        <Route path="*" element={<Notfound/>}/>
+
+        </Routes>
     </div>
+    </Router>
   );
 }
 
